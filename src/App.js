@@ -18,9 +18,9 @@ function App() {
 		setCart([...cart, item]);
 	};
 
-	const RemoveItem = (book) => {
-		cart.splice(book)
-		return setCart([...cart])
+	const RemoveItem = (id) => {
+			const newCart = [...cart];
+			setCart(newCart.filter(item => item.id !== id))
 		
 	}
 	console.log(cart)
