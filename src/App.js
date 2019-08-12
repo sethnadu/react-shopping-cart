@@ -18,9 +18,15 @@ function App() {
 		setCart([...cart, item]);
 	};
 
+	const RemoveItem = (book) => {
+		cart.splice(book)
+		return setCart([...cart])
+		
+	}
+	console.log(cart)
 	return (
 		<ProductContext.Provider value ={{products, addItem}}>
-			<CartContext.Provider value ={{cart}}>
+			<CartContext.Provider value ={{cart, RemoveItem}}>
 				<div className="App">
 					<Navigation />
 
